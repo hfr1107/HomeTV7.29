@@ -9,6 +9,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.util.Log;
 
+
 import com.github.tvbox.osc.base.App;
 
 import org.json.JSONException;
@@ -19,8 +20,10 @@ import java.util.HashMap;
 public class ucplayer {
     public static final String TAG = "ThirdParty.uc";
 
-    private static final String PACKAGE_NAME = "com.UCMobile";
-    private static final String PLAYBACK_ACTIVITY = "com.UCMobile.main.UCMobile";
+    private static final String PACKAGE_NAME_1 = "com.UCMobile";
+    private static final String PLAYBACK_ACTIVITY_1 = "com.UCMobile.main.UCMobile";
+    private static final String PACKAGE_NAME_2 = "com.ucbrowser.tv";
+    private static final String PLAYBACK_ACTIVITY_2 = "com.ucweb.tv.activity.MainActivity";
 
     private static class ucPackageInfo {
         final String packageName;
@@ -33,7 +36,8 @@ public class ucplayer {
     }
 
     private static final ucPackageInfo[] PACKAGES = {
-            new ucPackageInfo(PACKAGE_NAME, PLAYBACK_ACTIVITY),
+            new ucPackageInfo(PACKAGE_NAME_1, PLAYBACK_ACTIVITY_1),
+            new ucPackageInfo(PACKAGE_NAME_2, PLAYBACK_ACTIVITY_2),
     };
 
     public static ucPackageInfo getPackageInfo() {
