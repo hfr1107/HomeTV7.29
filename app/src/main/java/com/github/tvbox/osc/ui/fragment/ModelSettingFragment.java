@@ -30,7 +30,10 @@ import com.lzy.okgo.callback.FileCallback;
 import com.lzy.okgo.model.Progress;
 import com.lzy.okgo.model.Response;
 import com.orhanobut.hawk.Hawk;
-
+import com.github.tvbox.osc.player.thirdparty.browser;
+import com.github.tvbox.osc.player.thirdparty.ucplayer;
+import com.github.tvbox.osc.player.thirdparty.MXPlayer;
+import com.github.tvbox.osc.player.thirdparty.ReexPlayer;
 import org.greenrobot.eventbus.EventBus;
 import org.jetbrains.annotations.NotNull;
 
@@ -360,6 +363,14 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 players.add(0);
                 players.add(1);
                 players.add(2);
+                if (ucplayer.getPackageInfo() != null && !ucplayer.getPackageInfo().isEmpty())
+                players.add(8);  
+                if (MXPlayer.getPackageInfo() != null && !MXPlayer.getPackageInfo().isEmpty())
+                players.add(10);
+                if (ReexPlayer.getPackageInfo() != null && !ReexPlayer.getPackageInfo().isEmpty())
+                players.add(11); 
+                if (browser.getPackageInfo() != null && !browser.getPackageInfo().isEmpty())
+                players.add(9);
                 SelectDialog<Integer> dialog = new SelectDialog<>(mActivity);
                 dialog.setTip("请选择默认播放器");
                 dialog.setAdapter(new SelectDialogAdapter.SelectDialogInterface<Integer>() {
