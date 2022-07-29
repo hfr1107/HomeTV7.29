@@ -363,13 +363,13 @@ public class ModelSettingFragment extends BaseLazyFragment {
                 players.add(0);
                 players.add(1);
                 players.add(2);
-                if (ucplayer.getPackageInfo() != null && !ucplayer.getPackageInfo().isEmpty())
+                if (ucplayer.getPackageInfo() != null)
                 players.add(8);  
-                if (MXPlayer.getPackageInfo() != null && !MXPlayer.getPackageInfo().isEmpty())
+                if (MXPlayer.getPackageInfo() != null)
                 players.add(10);
-                if (ReexPlayer.getPackageInfo() != null && !ReexPlayer.getPackageInfo().isEmpty())
+                if (ReexPlayer.getPackageInfo() != null)
                 players.add(11); 
-                if (browser.getPackageInfo() != null && !browser.getPackageInfo().isEmpty())
+                if (browser.getPackageInfo() != null)
                 players.add(9);
                 SelectDialog<Integer> dialog = new SelectDialog<>(mActivity);
                 dialog.setTip("请选择默认播放器");
